@@ -58,7 +58,7 @@
   if (regTrigger) {
     regTrigger.addEventListener('click', function () {
       var imgSrc = regTrigger.getAttribute('data-img');
-      openModal('사업자등록증', '사업자등록증 — Union (106-05-28053)', imgSrc);
+      openModal('폴란드 대사관 감사장', '폴란드 대사관 감사장 — 유니온 인테리어', imgSrc);
     });
     regTrigger.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') {

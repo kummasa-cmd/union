@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Union | 건축·실내건축 전문기업</title>
-  <meta name="description" content="주인정신을 바탕으로 신뢰와 기술력을 짓는 건축시공 및 실내건축 시공·설계 전문기업 Union(유니온)입니다.">
+  <title data-i18n="meta.title">UNION | 건축·실내건축 전문기업</title>
+  <meta name="description" content="주인정신을 바탕으로 신뢰와 기술력을 짓는 건축시공 및 실내건축 시공·설계 전문기업 UNION(유니온)입니다." data-i18n-attr-content="meta.description">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Union | 건축·실내건축 전문기업">
-  <meta property="og:description" content="주인정신을 바탕으로 신뢰와 기술력을 짓는 건축시공 및 실내건축 시공·설계 전문기업 Union(유니온)입니다.">
-  <meta property="og:locale" content="ko_KR">
+  <meta property="og:title" content="UNION | 건축·실내건축 전문기업" data-i18n-attr-content="meta.title">
+  <meta property="og:description" content="주인정신을 바탕으로 신뢰와 기술력을 짓는 건축시공 및 실내건축 시공·설계 전문기업 UNION(유니온)입니다." data-i18n-attr-content="meta.description">
+  <meta property="og:locale" content="ko_KR" data-i18n-attr-content="meta.ogLocale">
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231C1C1C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' fill='%238B7355' text-anchor='middle'%3EU%3C/text%3E%3C/svg%3E">
 
@@ -23,19 +23,25 @@
   <!-- ============ Header ============ -->
   <header class="header" id="header">
     <div class="header__inner">
-      <a href="#top" class="logo">Union</a>
+      <a href="#top" class="logo">UNION</a>
 
       <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li><a href="#history" class="nav__link">회사연혁</a></li>
-          <li><a href="#greeting" class="nav__link">인사말씀</a></li>
-          <li><a href="#business" class="nav__link">사업분야</a></li>
-          <li><a href="#portfolio" class="nav__link">업무실적</a></li>
-          <li><a href="#registration" class="nav__link">사업자등록증</a></li>
+          <li><a href="#history" class="nav__link" data-i18n="nav.history">회사연혁</a></li>
+          <li><a href="#about" class="nav__link">ABOUT UNION</a></li>
+          <li><a href="#business" class="nav__link" data-i18n="nav.business">사업분야</a></li>
+          <li><a href="#portfolio" class="nav__link" data-i18n="nav.portfolio">업무실적</a></li>
+          <li><a href="#registration" class="nav__link" data-i18n="nav.registration">사업자등록증</a></li>
         </ul>
       </nav>
 
-      <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">
+      <div class="lang-switch" id="langSwitch" role="group" aria-label="Language selection">
+        <button type="button" class="lang-switch__btn is-active" data-lang="ko" aria-pressed="true">KOR</button>
+        <span class="lang-switch__divider" aria-hidden="true">/</span>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">ENG</button>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="메뉴 열기" data-i18n-attr-aria-label="a11y.openMenu" aria-expanded="false" aria-controls="nav">
         <span class="hamburger__bar"></span>
         <span class="hamburger__bar"></span>
         <span class="hamburger__bar"></span>
@@ -46,14 +52,14 @@
   <main id="top">
 
     <!-- ============ Hero ============ -->
-    <section class="hero" aria-label="인트로">
-      <div class="hero__bg" role="img" aria-label="인테리어 대표 이미지"></div>
+    <section class="hero" aria-label="인트로" data-i18n-attr-aria-label="a11y.intro">
+      <div class="hero__bg" role="img" aria-label="인테리어 대표 이미지" data-i18n-attr-aria-label="hero.bgAria"></div>
       <div class="hero__content">
-        <span class="hero__chip">CORPORATION Union GROUP</span>
-        <h1 class="hero__main">Building Trust,<br>Designing Space</h1>
-        <p class="hero__sub">주인정신을 바탕으로 신뢰와 기술력을 짓습니다.</p>
+        <span class="hero__chip">CORPORATION UNION GROUP</span>
+        <h1 class="hero__main">We unite integrity,<br>detail and space.</h1>
+        <p class="hero__sub" data-i18n="hero.sub">신뢰와 정교함으로 공간의 가치를 완성합니다.</p>
       </div>
-      <a href="#history" class="hero__scroll" aria-label="아래로 스크롤">
+      <a href="#history" class="hero__scroll" aria-label="아래로 스크롤" data-i18n-attr-aria-label="hero.scrollAria">
         <span class="hero__scroll-line"></span>
         Scroll
       </a>
@@ -64,58 +70,107 @@
       <div class="container history">
         <div data-aos="fade-up">
           <span class="eyebrow">Company Info</span>
-          <div class="history__since">SINCE<br>2009</div>
-          <p class="history__label">헤리티지와 신뢰를 바탕으로 성장해온 Union의 발자취</p>
+          <div class="history__since">SINCE<br>2002</div>
+          <p class="history__label" data-i18n="history.label">UNION은 시간이 지나도 가치가 남는 공간을 만듭니다.</p>
         </div>
 
         <div data-aos="fade-up">
-          <h2 id="history-title" class="section-title" style="margin-bottom:32px;">회사연혁</h2>
+          <h2 id="history-title" class="section-title" style="margin-bottom:32px;" data-i18n="history.title">회사연혁</h2>
           <dl class="history__list">
             <div class="history__row">
-              <dt class="history__term">회사명</dt>
-              <dd class="history__desc">Union</dd>
+              <dt class="history__term" data-i18n="history.term.name">회사명</dt>
+              <dd class="history__desc">UNION</dd>
             </div>
             <div class="history__row">
-              <dt class="history__term">설립일</dt>
-              <dd class="history__desc">2009년 01월 06일</dd>
+              <dt class="history__term" data-i18n="history.term.founded">설립일</dt>
+              <dd class="history__desc" data-i18n="history.founded">2002년 07월 31일</dd>
             </div>
             <div class="history__row">
-              <dt class="history__term">대표자</dt>
-              <dd class="history__desc">서영종</dd>
+              <dt class="history__term" data-i18n="history.term.ceo">대표자</dt>
+              <dd class="history__desc" data-i18n="history.ceo">서영종</dd>
             </div>
             <div class="history__row">
-              <dt class="history__term">주소</dt>
-              <dd class="history__desc">서울시 영등포구 신길7동 1127</dd>
+              <dt class="history__term" data-i18n="history.term.address">주소</dt>
+              <dd class="history__desc" data-i18n="history.address">서울시 영등포구 신길7동 1127</dd>
             </div>
             <div class="history__row">
-              <dt class="history__term">업태</dt>
-              <dd class="history__desc">서비스</dd>
+              <dt class="history__term" data-i18n="history.term.bizType">업태</dt>
+              <dd class="history__desc" data-i18n="history.bizType">서비스</dd>
             </div>
             <div class="history__row">
-              <dt class="history__term">업종</dt>
-              <dd class="history__desc">건축 / 실내건축</dd>
+              <dt class="history__term" data-i18n="history.term.industry">업종</dt>
+              <dd class="history__desc" data-i18n="history.industry">건축 / 실내건축</dd>
             </div>
             <div class="history__row">
-              <dt class="history__term">전화</dt>
+              <dt class="history__term" data-i18n="history.term.tel">전화</dt>
               <dd class="history__desc">02-797-6743</dd>
+            </div>
+            <div class="history__row">
+              <dt class="history__term">FAX</dt>
+              <dd class="history__desc">(02)795-0155</dd>
+            </div>
+            <div class="history__row">
+              <dt class="history__term" data-i18n="history.term.mobile">핸드폰</dt>
+              <dd class="history__desc">010-8252-9859</dd>
+            </div>
+            <div class="history__row">
+              <dt class="history__term" data-i18n="history.term.email">이메일</dt>
+              <dd class="history__desc">union172@naver.com</dd>
             </div>
           </dl>
         </div>
       </div>
     </section>
 
-    <!-- ============ Chapter 2. 인사말씀 ============ -->
-    <section class="section section--surface greeting" id="greeting" aria-labelledby="greeting-title">
-      <div class="container greeting__inner" data-aos="fade-up">
-        <span class="eyebrow" id="greeting-title">Greeting</span>
-        <div class="greeting__quote-mark" aria-hidden="true">&ldquo;</div>
-        <p class="greeting__text">안녕하십니까?
-Union 입니다.
+    <!-- ============ ABOUT UNION ============ -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">About UNION</span>
+          <h2 id="about-title" class="section-title">ABOUT UNION</h2>
+        </div>
 
-유니온은 건축시공 및 실내건축 시공, 설계를 주업으로 하는 회사로서
-주인정신을 바탕으로 품질의 신뢰 및 축적된 기술력으로
-최선을 다할 것을 약속드립니다.</p>
-        <p class="greeting__signature">— Union 임직원 일동</p>
+        <p class="about__lead" data-aos="fade-up" data-i18n="about.lead">
+          UNION은 건축과 실내건축의 설계·시공을 기반으로<br>
+          주거·상업·외교 공간에서 경험과 신뢰를 쌓아왔습니다.
+          <br><br>
+          정교한 기술력과 책임 있는 시공으로<br>
+          시간이 지나도 가치가 남는 공간을 만듭니다.
+        </p>
+
+        <h3 class="about__philosophy-title" data-aos="fade-up">UNION PHILOSOPHY</h3>
+
+        <div class="about__philosophy-grid">
+          <article class="philosophy-card" data-aos="fade-up">
+            <span class="philosophy-card__letter">U</span>
+            <h4 class="philosophy-card__title">Understanding</h4>
+            <p class="philosophy-card__desc" data-i18n="about.u">공간과 고객을 깊이 이해합니다.</p>
+          </article>
+
+          <article class="philosophy-card" data-aos="fade-up">
+            <span class="philosophy-card__letter">N</span>
+            <h4 class="philosophy-card__title">Nobility</h4>
+            <p class="philosophy-card__desc" data-i18n="about.n1">시간이 지나도 남는 품격을 추구합니다.</p>
+          </article>
+
+          <article class="philosophy-card" data-aos="fade-up">
+            <span class="philosophy-card__letter">I</span>
+            <h4 class="philosophy-card__title">Integrity</h4>
+            <p class="philosophy-card__desc" data-i18n="about.i">정직과 책임을 원칙으로 합니다.</p>
+          </article>
+
+          <article class="philosophy-card" data-aos="fade-up">
+            <span class="philosophy-card__letter">O</span>
+            <h4 class="philosophy-card__title">Originality</h4>
+            <p class="philosophy-card__desc" data-i18n="about.o">공간만의 고유한 가치를 설계합니다.</p>
+          </article>
+
+          <article class="philosophy-card" data-aos="fade-up">
+            <span class="philosophy-card__letter">N</span>
+            <h4 class="philosophy-card__title">Nuance</h4>
+            <p class="philosophy-card__desc" data-i18n="about.n2">보이지 않는 차이까지 세심하게 완성합니다.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -124,7 +179,7 @@ Union 입니다.
       <div class="container">
         <div class="section-head" data-aos="fade-up">
           <span class="eyebrow">Business Areas</span>
-          <h2 id="business-title" class="section-title">사업분야</h2>
+          <h2 id="business-title" class="section-title" data-i18n="business.title">사업분야</h2>
         </div>
 
         <div class="business__grid">
@@ -133,8 +188,8 @@ Union 입니다.
             <div class="business-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 11h.01M15 11h.01M9 15h.01M15 15h.01"/></svg>
             </div>
-            <h3 class="business-card__title">인테리어 시공</h3>
-            <p class="business-card__desc">공간의 가치를 높이는 실내건축 시공 서비스</p>
+            <h3 class="business-card__title" data-i18n="business.card1.title">인테리어 시공</h3>
+            <p class="business-card__desc" data-i18n="business.card1.desc">공간의 가치를 높이는 실내건축 시공 서비스</p>
           </article>
 
           <article class="business-card" data-aos="fade-up">
@@ -142,8 +197,8 @@ Union 입니다.
             <div class="business-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="8" height="18"/><rect x="12" y="9" width="8" height="12"/><path d="M7 7h1M7 11h1M7 15h1M16 13h1M16 17h1"/></svg>
             </div>
-            <h3 class="business-card__title">건축 시공</h3>
-            <p class="business-card__desc">견고한 기술력을 바탕으로 한 건축 시공</p>
+            <h3 class="business-card__title" data-i18n="business.card2.title">건축 시공</h3>
+            <p class="business-card__desc" data-i18n="business.card2.desc">견고한 기술력을 바탕으로 한 건축 시공</p>
           </article>
 
           <article class="business-card" data-aos="fade-up">
@@ -151,8 +206,8 @@ Union 입니다.
             <div class="business-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
             </div>
-            <h3 class="business-card__title">설계 및 기획</h3>
-            <p class="business-card__desc">고객 니즈에 맞춘 맞춤형 설계와 프로젝트 기획</p>
+            <h3 class="business-card__title" data-i18n="business.card3.title">설계 및 기획</h3>
+            <p class="business-card__desc" data-i18n="business.card3.desc">고객 니즈에 맞춘 맞춤형 설계와 프로젝트 기획</p>
           </article>
         </div>
       </div>
@@ -163,30 +218,30 @@ Union 입니다.
       <div class="container">
         <div class="section-head" data-aos="fade-up">
           <span class="eyebrow">Portfolio</span>
-          <h2 id="portfolio-title" class="section-title">업무실적</h2>
+          <h2 id="portfolio-title" class="section-title" data-i18n="portfolio.title">업무실적</h2>
         </div>
 
-        <div class="portfolio__filters" role="tablist" aria-label="업무실적 카테고리 필터" data-aos="fade-up">
-          <button class="filter-btn is-active" role="tab" aria-selected="true" data-filter="all">전체</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="업무시설">업무시설</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="상업시설">상업시설</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="숙박시설">숙박시설</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="공장·시설">공장·시설</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="주택">주택</button>
-          <button class="filter-btn" role="tab" aria-selected="false" data-filter="대사관">대사관</button>
+        <div class="portfolio__filters" role="tablist" aria-label="업무실적 카테고리 필터" data-i18n-attr-aria-label="portfolio.filterAria" data-aos="fade-up">
+          <button class="filter-btn is-active" role="tab" aria-selected="true" data-filter="all" data-i18n="cat.all">전체</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="업무시설" data-i18n="cat.office">업무시설</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="상업시설" data-i18n="cat.commercial">상업시설</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="숙박시설" data-i18n="cat.hospitality">숙박시설</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="공장·시설" data-i18n="cat.factory">공장·시설</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="주택" data-i18n="cat.residential">주택</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="대사관" data-i18n="cat.embassy">대사관</button>
         </div>
 
         <div class="portfolio__grid" id="portfolioGrid">
 
           <!-- 01. Royal Thai Embassy — opens standalone detail page in new tab -->
           <article class="portfolio-card" data-category="대사관" data-aos="fade-up">
-            <a href="portfolio/royal-thai-embassy.html" target="_blank" rel="noopener" aria-label="태국대사관 프로젝트 상세페이지 새창 열기">
+            <a href="portfolio/royal-thai-embassy.html" target="_blank" rel="noopener" aria-label="태국대사관 프로젝트 상세페이지 새창 열기" data-i18n-attr-aria-label="pf.thai.linkAria">
               <div class="portfolio-card__thumb">
-                <div class="img-placeholder" role="img" aria-label="태국대사관 연회장 이미지"><img src="assets/images/portfolio/thai-embassy/front.jpg" alt="태국대사관 연회장" loading="lazy"></div>
-                <span class="portfolio-card__label">대사관</span>
+                <div class="img-placeholder" role="img" aria-label="태국대사관 연회장 이미지" data-i18n-attr-aria-label="pf.thai.imgAria"><img src="assets/images/portfolio/thai-embassy/front.jpg" alt="태국대사관 연회장" data-i18n-attr-alt="pf.thai.imgAria" loading="lazy"></div>
+                <span class="portfolio-card__label" data-i18n="cat.embassy">대사관</span>
               </div>
               <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">태국대사관 (Royal Thai Embassy)<br>연회장 &amp; 회의실</h3>
+                <h3 class="portfolio-card__title" data-i18n="pf.thai.title">태국대사관 (Royal Thai Embassy)<br>연회장 &amp; 회의실</h3>
                 <span class="portfolio-card__link">View Detail →</span>
               </div>
             </a>
@@ -194,13 +249,13 @@ Union 입니다.
 
           <!-- 02. 경기신용보증 -->
           <article class="portfolio-card" data-category="업무시설" data-aos="fade-up">
-            <button type="button" class="portfolio-card__trigger" data-title="경기신용보증" data-img="assets/images/portfolio/portfolio_01.jpg">
+            <button type="button" class="portfolio-card__trigger" data-title="경기신용보증" data-i18n-attr-data-title="pf.02.title" data-img="assets/images/portfolio/portfolio_01.jpg">
               <div class="portfolio-card__thumb">
-                <div class="img-placeholder img-placeholder--light" role="img" aria-label="경기신용보증 이미지"><img src="assets/images/portfolio/portfolio_01.jpg" alt="경기신용보증" loading="lazy"></div>
-                <span class="portfolio-card__label">업무시설</span>
+                <div class="img-placeholder img-placeholder--light" role="img" aria-label="경기신용보증 이미지" data-i18n-attr-aria-label="pf.02.title"><img src="assets/images/portfolio/portfolio_01.jpg" alt="경기신용보증" data-i18n-attr-alt="pf.02.title" loading="lazy"></div>
+                <span class="portfolio-card__label" data-i18n="cat.office">업무시설</span>
               </div>
               <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">경기신용보증</h3>
+                <h3 class="portfolio-card__title" data-i18n="pf.02.title">경기신용보증</h3>
                 <span class="portfolio-card__link">View Detail →</span>
               </div>
             </button>
@@ -208,13 +263,13 @@ Union 입니다.
 
           <!-- 03. 에이티젠 -->
           <article class="portfolio-card" data-category="업무시설" data-aos="fade-up">
-            <button type="button" class="portfolio-card__trigger" data-title="에이티젠" data-img="assets/images/portfolio/portfolio_02.jpg">
+            <button type="button" class="portfolio-card__trigger" data-title="에이티젠" data-i18n-attr-data-title="pf.03.title" data-img="assets/images/portfolio/portfolio_02.jpg">
               <div class="portfolio-card__thumb">
-                <div class="img-placeholder img-placeholder--light" role="img" aria-label="에이티젠 이미지"><img src="assets/images/portfolio/portfolio_02.jpg" alt="에이티젠" loading="lazy"></div>
-                <span class="portfolio-card__label">업무시설</span>
+                <div class="img-placeholder img-placeholder--light" role="img" aria-label="에이티젠 이미지" data-i18n-attr-aria-label="pf.03.title"><img src="assets/images/portfolio/portfolio_02.jpg" alt="에이티젠" data-i18n-attr-alt="pf.03.title" loading="lazy"></div>
+                <span class="portfolio-card__label" data-i18n="cat.office">업무시설</span>
               </div>
               <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">에이티젠</h3>
+                <h3 class="portfolio-card__title" data-i18n="pf.03.title">에이티젠</h3>
                 <span class="portfolio-card__link">View Detail →</span>
               </div>
             </button>
@@ -222,13 +277,13 @@ Union 입니다.
 
           <!-- 04. 일산 클리닉 -->
           <article class="portfolio-card" data-category="상업시설" data-aos="fade-up">
-            <button type="button" class="portfolio-card__trigger" data-title="일산 클리닉" data-img="assets/images/portfolio/portfolio_03.jpg">
+            <button type="button" class="portfolio-card__trigger" data-title="일산 클리닉" data-i18n-attr-data-title="pf.04.title" data-img="assets/images/portfolio/portfolio_03.jpg">
               <div class="portfolio-card__thumb">
-                <div class="img-placeholder img-placeholder--light" role="img" aria-label="일산 클리닉 이미지"><img src="assets/images/portfolio/portfolio_03.jpg" alt="일산 클리닉" loading="lazy"></div>
-                <span class="portfolio-card__label">상업시설</span>
+                <div class="img-placeholder img-placeholder--light" role="img" aria-label="일산 클리닉 이미지" data-i18n-attr-aria-label="pf.04.title"><img src="assets/images/portfolio/portfolio_03.jpg" alt="일산 클리닉" data-i18n-attr-alt="pf.04.title" loading="lazy"></div>
+                <span class="portfolio-card__label" data-i18n="cat.commercial">상업시설</span>
               </div>
               <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">일산 클리닉</h3>
+                <h3 class="portfolio-card__title" data-i18n="pf.04.title">일산 클리닉</h3>
                 <span class="portfolio-card__link">View Detail →</span>
               </div>
             </button>
@@ -236,13 +291,13 @@ Union 입니다.
 
           <!-- 05. 포항 웨딩홀 -->
           <article class="portfolio-card" data-category="상업시설" data-aos="fade-up">
-            <button type="button" class="portfolio-card__trigger" data-title="포항 웨딩홀" data-img="assets/images/portfolio/portfolio_04.jpg">
+            <button type="button" class="portfolio-card__trigger" data-title="포항 웨딩홀" data-i18n-attr-data-title="pf.05.title" data-img="assets/images/portfolio/portfolio_04.jpg">
               <div class="portfolio-card__thumb">
-                <div class="img-placeholder img-placeholder--light" role="img" aria-label="포항 웨딩홀 이미지"><img src="assets/images/portfolio/portfolio_04.jpg" alt="포항 웨딩홀" loading="lazy"></div>
-                <span class="portfolio-card__label">상업시설</span>
+                <div class="img-placeholder img-placeholder--light" role="img" aria-label="포항 웨딩홀 이미지" data-i18n-attr-aria-label="pf.05.title"><img src="assets/images/portfolio/portfolio_04.jpg" alt="포항 웨딩홀" data-i18n-attr-alt="pf.05.title" loading="lazy"></div>
+                <span class="portfolio-card__label" data-i18n="cat.commercial">상업시설</span>
               </div>
               <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">포항 웨딩홀</h3>
+                <h3 class="portfolio-card__title" data-i18n="pf.05.title">포항 웨딩홀</h3>
                 <span class="portfolio-card__link">View Detail →</span>
               </div>
             </button>
@@ -250,13 +305,13 @@ Union 입니다.
 
           <!-- 06. 구례 평화식당 -->
           <article class="portfolio-card" data-category="상업시설" data-aos="fade-up">
-            <button type="button" class="portfolio-card__trigger" data-title="구례 평화식당" data-img="assets/images/portfolio/portfolio_05.jpg">
+            <button type="button" class="portfolio-card__trigger" data-title="구례 평화식당" data-i18n-attr-data-title="pf.06.title" data-img="assets/images/portfolio/portfolio_05.jpg">
               <div class="portfolio-card__thumb">
-                <div class="img-placeholder img-placeholder--light" role="img" aria-label="구례 평화식당 이미지"><img src="assets/images/portfolio/portfolio_05.jpg" alt="구례 평화식당" loading="lazy"></div>
-                <span class="portfolio-card__label">상업시설</span>
+                <div class="img-placeholder img-placeholder--light" role="img" aria-label="구례 평화식당 이미지" data-i18n-attr-aria-label="pf.06.title"><img src="assets/images/portfolio/portfolio_05.jpg" alt="구례 평화식당" data-i18n-attr-alt="pf.06.title" loading="lazy"></div>
+                <span class="portfolio-card__label" data-i18n="cat.commercial">상업시설</span>
               </div>
               <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">구례 평화식당</h3>
+                <h3 class="portfolio-card__title" data-i18n="pf.06.title">구례 평화식당</h3>
                 <span class="portfolio-card__link">View Detail →</span>
               </div>
             </button>
@@ -264,13 +319,13 @@ Union 입니다.
 
           <!-- 07. 남양주 베이커리 카페 -->
           <article class="portfolio-card" data-category="상업시설" data-aos="fade-up">
-            <button type="button" class="portfolio-card__trigger" data-title="남양주 베이커리 카페" data-img="assets/images/portfolio/portfolio_06.jpg">
+            <button type="button" class="portfolio-card__trigger" data-title="남양주 베이커리 카페" data-i18n-attr-data-title="pf.07.title" data-img="assets/images/portfolio/portfolio_06.jpg">
               <div class="portfolio-card__thumb">
-                <div class="img-placeholder img-placeholder--light" role="img" aria-label="남양주 베이커리 카페 이미지"><img src="assets/images/portfolio/portfolio_06.jpg" alt="남양주 베이커리 카페" loading="lazy"></div>
-                <span class="portfolio-card__label">상업시설</span>
+                <div class="img-placeholder img-placeholder--light" role="img" aria-label="남양주 베이커리 카페 이미지" data-i18n-attr-aria-label="pf.07.title"><img src="assets/images/portfolio/portfolio_06.jpg" alt="남양주 베이커리 카페" data-i18n-attr-alt="pf.07.title" loading="lazy"></div>
+                <span class="portfolio-card__label" data-i18n="cat.commercial">상업시설</span>
               </div>
               <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">남양주 베이커리 카페</h3>
+                <h3 class="portfolio-card__title" data-i18n="pf.07.title">남양주 베이커리 카페</h3>
                 <span class="portfolio-card__link">View Detail →</span>
               </div>
             </button>
@@ -278,13 +333,13 @@ Union 입니다.
 
           <!-- 08. 평창 생활숙박시설 -->
           <article class="portfolio-card" data-category="숙박시설" data-aos="fade-up">
-            <button type="button" class="portfolio-card__trigger" data-title="평창 생활숙박시설" data-img="assets/images/portfolio/portfolio_07.jpg">
+            <button type="button" class="portfolio-card__trigger" data-title="평창 생활숙박시설" data-i18n-attr-data-title="pf.08.title" data-img="assets/images/portfolio/portfolio_07.jpg">
               <div class="portfolio-card__thumb">
-                <div class="img-placeholder img-placeholder--light" role="img" aria-label="평창 생활숙박시설 이미지"><img src="assets/images/portfolio/portfolio_07.jpg" alt="평창 생활숙박시설" loading="lazy"></div>
-                <span class="portfolio-card__label">숙박시설</span>
+                <div class="img-placeholder img-placeholder--light" role="img" aria-label="평창 생활숙박시설 이미지" data-i18n-attr-aria-label="pf.08.title"><img src="assets/images/portfolio/portfolio_07.jpg" alt="평창 생활숙박시설" data-i18n-attr-alt="pf.08.title" loading="lazy"></div>
+                <span class="portfolio-card__label" data-i18n="cat.hospitality">숙박시설</span>
               </div>
               <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">평창 생활숙박시설</h3>
+                <h3 class="portfolio-card__title" data-i18n="pf.08.title">평창 생활숙박시설</h3>
                 <span class="portfolio-card__link">View Detail →</span>
               </div>
             </button>
@@ -292,13 +347,13 @@ Union 입니다.
 
           <!-- 09. 금호방재 -->
           <article class="portfolio-card" data-category="공장·시설" data-aos="fade-up">
-            <button type="button" class="portfolio-card__trigger" data-title="금호방재" data-img="assets/images/portfolio/portfolio_08.jpg">
+            <button type="button" class="portfolio-card__trigger" data-title="금호방재" data-i18n-attr-data-title="pf.09.title" data-img="assets/images/portfolio/portfolio_08.jpg">
               <div class="portfolio-card__thumb">
-                <div class="img-placeholder img-placeholder--light" role="img" aria-label="금호방재 이미지"><img src="assets/images/portfolio/portfolio_08.jpg" alt="금호방재" loading="lazy"></div>
-                <span class="portfolio-card__label">공장·시설</span>
+                <div class="img-placeholder img-placeholder--light" role="img" aria-label="금호방재 이미지" data-i18n-attr-aria-label="pf.09.title"><img src="assets/images/portfolio/portfolio_08.jpg" alt="금호방재" data-i18n-attr-alt="pf.09.title" loading="lazy"></div>
+                <span class="portfolio-card__label" data-i18n="cat.factory">공장·시설</span>
               </div>
               <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">금호방재</h3>
+                <h3 class="portfolio-card__title" data-i18n="pf.09.title">금호방재</h3>
                 <span class="portfolio-card__link">View Detail →</span>
               </div>
             </button>
@@ -306,13 +361,13 @@ Union 입니다.
 
           <!-- 10. 평창동 단독주택 -->
           <article class="portfolio-card" data-category="주택" data-aos="fade-up">
-            <button type="button" class="portfolio-card__trigger" data-title="평창동 단독주택" data-img="assets/images/portfolio/portfolio_09.jpg">
+            <button type="button" class="portfolio-card__trigger" data-title="평창동 단독주택" data-i18n-attr-data-title="pf.10.title" data-img="assets/images/portfolio/portfolio_09.jpg">
               <div class="portfolio-card__thumb">
-                <div class="img-placeholder img-placeholder--light" role="img" aria-label="평창동 단독주택 이미지"><img src="assets/images/portfolio/portfolio_09.jpg" alt="평창동 단독주택" loading="lazy"></div>
-                <span class="portfolio-card__label">주택</span>
+                <div class="img-placeholder img-placeholder--light" role="img" aria-label="평창동 단독주택 이미지" data-i18n-attr-aria-label="pf.10.title"><img src="assets/images/portfolio/portfolio_09.jpg" alt="평창동 단독주택" data-i18n-attr-alt="pf.10.title" loading="lazy"></div>
+                <span class="portfolio-card__label" data-i18n="cat.residential">주택</span>
               </div>
               <div class="portfolio-card__body">
-                <h3 class="portfolio-card__title">평창동 단독주택</h3>
+                <h3 class="portfolio-card__title" data-i18n="pf.10.title">평창동 단독주택</h3>
                 <span class="portfolio-card__link">View Detail →</span>
               </div>
             </button>
@@ -325,40 +380,26 @@ Union 입니다.
     <!-- ============ Chapter 5. 사업자등록증 ============ -->
     <section class="section" id="registration" aria-labelledby="registration-title">
       <div class="container registration">
-        <div class="registration__image-wrap" id="regZoomTrigger" data-img="assets/images/portfolio/license.jpg" data-aos="fade-up" role="button" tabindex="0" aria-label="폴란드 대사관 감사장 확대 보기">
-          <div class="img-placeholder img-placeholder--light" style="aspect-ratio: 3/4;"><img src="assets/images/portfolio/license.jpg" alt="폴란드 대사관 감사장" loading="lazy"></div>
-          <span class="registration__zoom-hint">확대 보기 +</span>
+        <div class="registration__image-wrap" id="regZoomTrigger" data-img="assets/images/portfolio/license.jpg" data-caption="폴란드 대사관 감사장 — 유니온 인테리어" data-i18n-attr-data-caption="reg.letterCaption" data-aos="fade-up" role="button" tabindex="0" aria-label="폴란드 대사관 감사장 확대 보기" data-i18n-attr-aria-label="reg.zoomAria">
+          <div class="img-placeholder img-placeholder--light" style="aspect-ratio: 3/4;"><img src="assets/images/portfolio/license.jpg" alt="폴란드 대사관 감사장" data-i18n-attr-alt="reg.letterAlt" loading="lazy"></div>
+          <span class="registration__zoom-hint" data-i18n="reg.zoomHint">확대 보기 +</span>
         </div>
 
         <div data-aos="fade-up">
-          <span class="eyebrow">Business Registration</span>
-          <h2 id="registration-title" class="section-title" style="margin-bottom:32px;">사업자등록증</h2>
-          <dl class="registration__info">
-            <div class="registration__row">
-              <dt class="registration__term">사업자등록번호</dt>
-              <dd>106-05-28053</dd>
-            </div>
-            <div class="registration__row">
-              <dt class="registration__term">회사명</dt>
-              <dd>유니온 인테리어</dd>
-            </div>
-            <div class="registration__row">
-              <dt class="registration__term">대표자</dt>
-              <dd>서영종</dd>
-            </div>
-            <div class="registration__row">
-              <dt class="registration__term">소재지</dt>
-              <dd>서울시 영등포구 신길7동 1127</dd>
-            </div>
-            <div class="registration__row">
-              <dt class="registration__term">업종</dt>
-              <dd>건설업</dd>
-            </div>
-            <div class="registration__row">
-              <dt class="registration__term">업태</dt>
-              <dd>실내인테리어 및 수리/수선서비스</dd>
-            </div>
-          </dl>
+          <span class="eyebrow">Polish Embassy Recommendation</span>
+          <h2 id="registration-title" class="section-title registration__title" style="margin-bottom:32px;" data-i18n="reg.title">폴란드 대사관이 인정한 신뢰와 완성도</h2>
+          <div class="registration__text" data-i18n="reg.text">
+            <p>2018년 주한 폴란드 대사관은<br>
+            UNION의 전문성과 높은 시공 품질,<br>
+            그리고 공사 기간 동안 보여준 세심한 배려와 협력에 대해<br>
+            공식 추천장을 전달했습니다.</p>
+            <p>어려운 공사 환경에서도 대사관 업무에 미치는 불편을 최소화하며<br>
+            프로젝트를 성공적으로 수행한 UNION의 기술력과 책임감을 높이 평가했습니다.</p>
+          </div>
+          <blockquote class="registration__quote" data-i18n="reg.quote">
+            <p>&ldquo;전문성, 높은 품질, 친절하고 세심한 협력에 감사드립니다.&rdquo;</p>
+            <cite>— 주한 폴란드 대사관<br>2018 · Embassy of the Republic of Poland in Seoul</cite>
+          </blockquote>
         </div>
       </div>
     </section>
@@ -368,26 +409,37 @@ Union 입니다.
   <!-- ============ Footer ============ -->
   <footer class="footer">
     <div class="container">
-      <p class="footer__logo">CORPORATION Union GROUP</p>
+      <p class="footer__logo">UNION INTERIOR</p>
       <p class="footer__info">
-        회사명: 유니온 인테리어 | 사업자번호: 106-05-28053<br>
-        서울시 영등포구 신길7동 1127<br>
-        대표: 서영종 | Tel: <a href="tel:02-797-6743">02)797-6743</a> | <a href="mailto:union172@naver.com">union172@naver.com</a>
+        <span data-i18n="footer.ceoLine">대표 서영종 · 사업자등록번호 106-05-28053</span><br>
+        <a href="tel:02-797-6743">02-797-6743</a> · <a href="mailto:union172@naver.com">union172@naver.com</a>
       </p>
-      <p class="footer__copyright">&copy; 2026 Union Corporation. All Rights Reserved.</p>
+      <p class="footer__copyright">&copy; 2026 UNION. All Rights Reserved.</p>
     </div>
   </footer>
 
   <!-- ============ Lightbox Modal ============ -->
   <div class="modal-overlay" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightboxCaption">
     <div class="modal__content">
-      <button class="modal__close" id="modalClose" aria-label="닫기">&times;</button>
+      <button class="modal__close" id="modalClose" aria-label="닫기" data-i18n-attr-aria-label="a11y.close">&times;</button>
       <div id="lightboxImage" class="img-placeholder" style="aspect-ratio:4/3; min-width:min(80vw,720px);"></div>
       <p class="modal__caption" id="lightboxCaption"></p>
     </div>
   </div>
 
+  <!-- ============ Music Player ============ -->
+  <div class="music-player" id="musicPlayer">
+    <audio id="musicAudio" src="public/music/Elegant%20Motion.mp3" loop preload="none"></audio>
+    <button type="button" class="music-player__btn" id="musicToggle" aria-pressed="false" aria-label="배경음악 재생">
+      <svg class="music-player__icon music-player__icon--play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+      <svg class="music-player__icon music-player__icon--pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+    </button>
+    <span class="music-player__title" id="musicTitle">UNION: Elegant Motion</span>
+  </div>
+
+  <script src="assets/js/i18n.js" defer></script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/modal.js" defer></script>
+  <script src="assets/js/music-player.js" defer></script>
 </body>
 </html>

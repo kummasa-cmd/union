@@ -213,12 +213,14 @@ h1, h2, h3, h4 {
 }
 
 .header.is-scrolled .logo,
-.nav__link {
+.nav__link,
+.lang-switch {
   color: var(--color-primary);
 }
 
 .header:not(.is-scrolled) .logo,
-.header:not(.is-scrolled) .nav__link {
+.header:not(.is-scrolled) .nav__link,
+.header:not(.is-scrolled) .lang-switch {
   color: #FFFFFF;
 }
 
@@ -256,6 +258,38 @@ h1, h2, h3, h4 {
 .nav__link:hover::after,
 .nav__link.is-active::after {
   transform: scaleX(1);
+}
+
+/* Language switch */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-inline-end: 28px;
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+}
+
+.lang-switch__btn {
+  padding: 4px 2px;
+  color: inherit;
+  opacity: 0.55;
+  transition: opacity var(--transition-base);
+}
+
+.lang-switch__btn:hover {
+  opacity: 0.8;
+}
+
+.lang-switch__btn.is-active {
+  opacity: 1;
+  font-weight: 700;
+}
+
+.lang-switch__divider {
+  opacity: 0.4;
+  font-size: 0.75rem;
 }
 
 /* Hamburger */
@@ -434,41 +468,60 @@ h1, h2, h3, h4 {
 }
 
 /* --------------------------------------------------------------------------
-   8. Chapter 2 — Greeting (#greeting)
+   8.5. About Union (#about)
    -------------------------------------------------------------------------- */
-.greeting {
-  text-align: center;
-}
-
-.greeting__inner {
-  max-width: 760px;
-  margin-inline: auto;
-  position: relative;
-}
-
-.greeting__quote-mark {
-  font-family: var(--font-en);
-  font-size: 6rem;
-  color: var(--color-accent);
-  line-height: 1;
-  opacity: 0.5;
-}
-
-.greeting__text {
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
-  color: var(--color-primary);
-  font-weight: 400;
+.about__lead {
+  max-width: 720px;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: var(--color-secondary);
   line-height: 1.9;
-  margin-block: 32px;
-  white-space: pre-line;
+  margin-bottom: 64px;
 }
 
-.greeting__signature {
-  margin-top: 40px;
+.about__philosophy-title {
   font-family: var(--font-en);
-  font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  color: var(--color-muted);
+  margin-bottom: 32px;
+}
+
+.about__philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.philosophy-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  padding: 32px 24px;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.philosophy-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(28, 28, 28, 0.08);
+}
+
+.philosophy-card__letter {
+  display: block;
+  font-family: var(--font-en);
+  font-size: 2rem;
   color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.philosophy-card__title {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.philosophy-card__desc {
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  line-height: 1.6;
 }
 
 /* --------------------------------------------------------------------------
@@ -667,21 +720,40 @@ h1, h2, h3, h4 {
   border-radius: 999px;
 }
 
-.registration__info {
-  border-top: 1px solid var(--color-line);
+.registration__title {
+  font-size: clamp(1.3rem, 1.9vw, 1.7rem);
+  white-space: nowrap;
 }
 
-.registration__row {
-  display: flex;
-  padding-block: 18px;
-  border-bottom: 1px solid var(--color-line);
-  gap: 24px;
+.registration__text {
+  color: var(--color-secondary);
+  font-size: 1rem;
+  line-height: 1.9;
 }
 
-.registration__term {
-  flex: 0 0 140px;
-  font-weight: 700;
+.registration__text p + p {
+  margin-top: 20px;
+}
+
+.registration__quote {
+  margin: 32px 0 0;
+  padding-inline-start: 24px;
+  border-inline-start: 2px solid var(--color-accent);
+}
+
+.registration__quote p {
+  font-size: 1.1rem;
   color: var(--color-primary);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.registration__quote cite {
+  display: block;
+  margin-top: 12px;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: var(--color-muted);
 }
 
 /* --------------------------------------------------------------------------
@@ -820,6 +892,78 @@ h1, h2, h3, h4 {
 }
 
 /* --------------------------------------------------------------------------
+   14.5. Music Player
+   -------------------------------------------------------------------------- */
+.music-player {
+  position: fixed;
+  inset-block-end: 24px;
+  inset-inline-end: 24px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  padding: 10px 12px;
+  box-shadow: 0 12px 28px rgba(28, 28, 28, 0.14);
+}
+
+.music-player__btn {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color var(--transition-base), transform var(--transition-base);
+}
+
+.music-player__btn:hover {
+  background-color: var(--color-accent-light);
+  transform: scale(1.06);
+}
+
+.music-player__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.music-player__icon--pause {
+  display: none;
+}
+
+.music-player__btn.is-playing .music-player__icon--play {
+  display: none;
+}
+
+.music-player__btn.is-playing .music-player__icon--pause {
+  display: block;
+}
+
+.music-player__title {
+  display: none;
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  padding-inline-end: 4px;
+}
+
+.music-player.is-playing .music-player__title {
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
    15. Responsive Breakpoints
    -------------------------------------------------------------------------- */
 
@@ -837,7 +981,8 @@ h1, h2, h3, h4 {
 /* Tablet: 768px – 991px — 2-column grids */
 @media (max-width: 991px) {
   .business__grid,
-  .portfolio__grid {
+  .portfolio__grid,
+  .about__philosophy-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -863,8 +1008,22 @@ h1, h2, h3, h4 {
   }
 
   .business__grid,
-  .portfolio__grid {
+  .portfolio__grid,
+  .about__philosophy-grid {
     grid-template-columns: 1fr;
+  }
+
+  .registration__title {
+    white-space: normal;
+  }
+
+  .music-player {
+    inset-block-end: 16px;
+    inset-inline-end: 16px;
+  }
+
+  .music-player__title {
+    max-width: 120px;
   }
 
   .section-head {
@@ -873,6 +1032,11 @@ h1, h2, h3, h4 {
 
   .header__inner {
     padding-inline: 20px;
+  }
+
+  .lang-switch {
+    margin-inline-end: 16px;
+    font-size: 0.75rem;
   }
 
   .nav {
@@ -906,13 +1070,11 @@ h1, h2, h3, h4 {
     color: var(--color-primary) !important;
   }
 
-  .registration__row,
   .history__row {
     flex-direction: column;
     gap: 4px;
   }
 
-  .registration__term,
   .history__term {
     flex: none;
   }

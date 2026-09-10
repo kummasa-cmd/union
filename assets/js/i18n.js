@@ -7,10 +7,12 @@
   /* English replacements, keyed by data-i18n / data-i18n-attr-* values.
      Korean is read straight from the DOM, so it never needs to be duplicated here. */
   var EN = {
-    'nav.history': 'Company History',
+    'nav.history': 'Our History',
+    'nav.about': 'Our Philosophy',
+    'about.title': 'Our Philosophy',
     'nav.business': 'Business Areas',
-    'nav.portfolio': 'Portfolio',
-    'nav.registration': 'Business Registration',
+    'nav.portfolio': 'Selected Projects',
+    'nav.registration': 'Recommendations & Certifications',
 
     'a11y.openMenu': 'Open menu',
     'a11y.intro': 'Intro',
